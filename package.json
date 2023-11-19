@@ -1,0 +1,71 @@
+{
+  "name": "@yuyin/nsc",
+  "type": "module",
+  "version": "0.0.0",
+  "packageManager": "pnpm@8.10.5",
+  "description": "_description_",
+  "author": "yuyinws",
+  "license": "MIT",
+  "homepage": "https://github.com/yuyinws/nsc#readme",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/yuyinws/nsc.git"
+  },
+  "bugs": "https://github.com/yuyinws/nsc/issues",
+  "keywords": [],
+  "sideEffects": false,
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.mjs",
+      "require": "./dist/index.cjs"
+    }
+  },
+  "main": "./dist/index.mjs",
+  "module": "./dist/index.mjs",
+  "types": "./dist/index.d.ts",
+  "typesVersions": {
+    "*": {
+      "*": [
+        "./dist/*",
+        "./dist/index.d.ts"
+      ]
+    }
+  },
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "unbuild",
+    "dev": "unbuild --stub",
+    "lint": "eslint .",
+    "prepublishOnly": "nr build",
+    "release": "bumpp && npm publish",
+    "start": "esno src/index.ts",
+    "test": "vitest",
+    "typecheck": "tsc --noEmit",
+    "prepare": "simple-git-hooks"
+  },
+  "devDependencies": {
+    "@antfu/eslint-config": "^1.2.1",
+    "@antfu/ni": "^0.21.9",
+    "@types/node": "^20.9.1",
+    "bumpp": "^9.2.0",
+    "eslint": "^8.53.0",
+    "esno": "^4.0.0",
+    "lint-staged": "^15.1.0",
+    "pnpm": "^8.10.5",
+    "rimraf": "^5.0.5",
+    "simple-git-hooks": "^2.9.0",
+    "typescript": "^5.2.2",
+    "unbuild": "^2.0.0",
+    "vite": "^5.0.0",
+    "vitest": "^1.0.0-beta.4"
+  },
+  "simple-git-hooks": {
+    "pre-commit": "pnpm lint-staged"
+  },
+  "lint-staged": {
+    "*": "eslint --fix"
+  }
+}
