@@ -7,9 +7,9 @@ import {
   select,
 } from '@clack/prompts'
 import { destr } from 'destr'
-import { detect, parseNr } from '@antfu/ni'
 import { PKG_DIR } from './utils/dir'
 import type { PKG } from './types'
+import { setEmoji } from './utils/emoji'
 
 async function main() {
   const pkgContent = await readFile(PKG_DIR, 'utf-8')
@@ -19,7 +19,7 @@ async function main() {
     const options = Object.entries(pkg.scripts).map(([key, value]) => {
       return {
         value: key,
-        label: key,
+        label: setEmoji(key),
         hint: value,
       }
     })
@@ -33,10 +33,7 @@ async function main() {
       return exit(0)
     }
 
-    const agent = await detect()
-    const command = await parseNr(agent!, [script])
-
-    execSync(command!, { stdio: 'inherit' })
+    execSync(`npm run ${script}`, { stdio: 'inherit' })
   }
   else {
     cancel('Operation cancelled')

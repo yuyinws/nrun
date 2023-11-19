@@ -45,12 +45,11 @@
     "prepublishOnly": "nr build",
     "release": "bumpp && npm publish",
     "start": "esno src/index.ts",
-    "test": "echo It works",
+    "test": "vitest",
     "typecheck": "tsc --noEmit",
     "prepare": "simple-git-hooks"
   },
   "dependencies": {
-    "@antfu/ni": "^0.21.9",
     "@clack/prompts": "^0.7.0",
     "destr": "^2.0.2"
   },
