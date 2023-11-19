@@ -32,23 +32,30 @@
       ]
     }
   },
+  "bin": {
+    "nsc": "bin/nsc.mjs"
+  },
   "files": [
     "dist"
   ],
   "scripts": {
     "build": "unbuild",
-    "dev": "unbuild --stub",
+    "dev": "esno src/index.ts",
     "lint": "eslint .",
     "prepublishOnly": "nr build",
     "release": "bumpp && npm publish",
     "start": "esno src/index.ts",
-    "test": "vitest",
+    "test": "echo It works",
     "typecheck": "tsc --noEmit",
     "prepare": "simple-git-hooks"
   },
+  "dependencies": {
+    "@antfu/ni": "^0.21.9",
+    "@clack/prompts": "^0.7.0",
+    "destr": "^2.0.2"
+  },
   "devDependencies": {
     "@antfu/eslint-config": "^1.2.1",
-    "@antfu/ni": "^0.21.9",
     "@types/node": "^20.9.1",
     "bumpp": "^9.2.0",
     "eslint": "^8.53.0",

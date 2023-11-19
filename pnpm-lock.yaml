@@ -7,13 +7,20 @@ settings:
 importers:
 
   .:
+    dependencies:
+      '@antfu/ni':
+        specifier: ^0.21.9
+        version: 0.21.9
+      '@clack/prompts':
+        specifier: ^0.7.0
+        version: 0.7.0
+      destr:
+        specifier: ^2.0.2
+        version: 2.0.2
     devDependencies:
       '@antfu/eslint-config':
         specifier: ^1.2.1
         version: 1.2.1(eslint@8.53.0)(typescript@5.2.2)(vitest@1.0.0-beta.4)
-      '@antfu/ni':
-        specifier: ^0.21.9
-        version: 0.21.9
       '@types/node':
         specifier: ^20.9.1
         version: 20.9.1
@@ -124,7 +131,7 @@ packages:
   /@antfu/ni@0.21.9:
     resolution: {integrity: sha512-zlwQy574YEYl9ssWMV98ADxobU5wePdtyaOeQ5jgzdV8WldPcK+Osqd1SeQwEWjN0Io0GKiqpQzKZXVgxU1jPg==}
     hasBin: true
-    dev: true
+    dev: false
 
   /@babel/code-frame@7.22.13:
     resolution: {integrity: sha512-XktuhWlJ5g+3TJXc5upd9Ks1HutSArik6jf2eAjYFyIOf4ej3RN+184cZbzDvbPnuTJIUhPKKJE3cIsYTiAT3w==}
@@ -322,6 +329,23 @@ packages:
       '@babel/helper-validator-identifier': 7.22.20
       to-fast-properties: 2.0.0
     dev: true
+
+  /@clack/core@0.3.3:
+    resolution: {integrity: sha512-5ZGyb75BUBjlll6eOa1m/IZBxwk91dooBWhPSL67sWcLS0zt9SnswRL0l26TVdBhb0wnWORRxUn//uH6n4z7+A==}
+    dependencies:
+      picocolors: 1.0.0
+      sisteransi: 1.0.5
+    dev: false
+
+  /@clack/prompts@0.7.0:
+    resolution: {integrity: sha512-0MhX9/B4iL6Re04jPrttDm+BsP8y6mS7byuv0BvXgdXhbV5PdlsHt55dvNsuBCPZ7xq1oTAOOuotR9NFbQyMSA==}
+    dependencies:
+      '@clack/core': 0.3.3
+      picocolors: 1.0.0
+      sisteransi: 1.0.5
+    dev: false
+    bundledDependencies:
+      - is-unicode-supported
 
   /@es-joy/jsdoccomment@0.41.0:
     resolution: {integrity: sha512-aKUhyn1QI5Ksbqcr3fFJj16p99QdjUxXAEuFst1Z47DRyoiMwivIH9MV/ARcJOCXVjPfjITciej8ZD2O/6qUmw==}
@@ -1786,9 +1810,8 @@ packages:
     resolution: {integrity: sha512-+uO4+qr7msjNNWKYPHqN/3+Dx3NFkmIzayk2L1MyZQlvgZb/J1A0fo410dpKrN2SnqFjt8n4JL8fDJE0wIgjFQ==}
     dev: true
 
-  /destr@2.0.0:
-    resolution: {integrity: sha512-FJ9RDpf3GicEBvzI3jxc2XhHzbqD8p4ANw/1kPsFBfTvP1b7Gn/Lg1vO7R9J4IVgoMbyUmFrFGZafJ1hPZpvlg==}
-    dev: true
+  /destr@2.0.2:
+    resolution: {integrity: sha512-65AlobnZMiCET00KaFFjUefxDX0khFA/E4myqZ7a6Sq1yZtR8+FVIvilVX66vF2uobSumxooYZChiRPCKNqhmg==}
 
   /diff-sequences@29.4.3:
     resolution: {integrity: sha512-ofrBgwpPhCD85kMKtE9RYFFq6OC1A89oW2vvgWZNCwxrUpRUILopY7lsYyMDSjc8g6U6aiO0Qubg6r4Wgt5ZnA==}
@@ -3348,7 +3371,6 @@ packages:
 
   /picocolors@1.0.0:
     resolution: {integrity: sha512-1fygroTLlHu66zi26VoTDv8yRgm0Fccecssto+MhsZ0D/DGW2sm8E8AjW7NU5VVTRt5GxbeZ5qBuJr+HyLYkjQ==}
-    dev: true
 
   /picomatch@2.3.1:
     resolution: {integrity: sha512-JU3teHTNjmE2VCGFzuY8EXzCDVwEqB2a8fsIvwaStHhAWJEeVd1o1QD80CU6+ZdEXXSLbSsuLwJjkCBWqRQUVA==}
@@ -3437,7 +3459,7 @@ packages:
     resolution: {integrity: sha512-lNeOl38Ws0eNxpO3+wD1I9rkHGQyj1NU1jlzv4go2CtEnEQEUfqnIvZG7W+bC/aXdJ27n5x/yUjb6RoT9tko+Q==}
     dependencies:
       defu: 6.1.2
-      destr: 2.0.0
+      destr: 2.0.2
       flat: 5.0.2
     dev: true
 
@@ -3645,7 +3667,6 @@ packages:
 
   /sisteransi@1.0.5:
     resolution: {integrity: sha512-bLGGlR1QxBcynn2d5YmDX4MGjlZvy2MRBDRNHLJ8VI6l6+9FUiyTFNJ0IveOSP0bcXgVDPRcfGqA0pjaqUpfVg==}
-    dev: true
 
   /slash@3.0.0:
     resolution: {integrity: sha512-g9Q1haeby36OSStwb4ntCGGGaKsaVSjQ68fBxoQcutl5fS1vuY18H3wSt3jFyFtrkx+Kz0V1G85A4MyAdDMi2Q==}
