@@ -1,17 +1,17 @@
 {
-  "name": "@yuyin/nsc",
+  "name": "@yuyin/nrun",
   "type": "module",
   "version": "0.0.1-beta.3",
   "packageManager": "pnpm@8.10.5",
   "description": "_description_",
   "author": "yuyinws",
   "license": "MIT",
-  "homepage": "https://github.com/yuyinws/nsc#readme",
+  "homepage": "https://github.com/yuyinws/nrun#readme",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/yuyinws/nsc.git"
+    "url": "git+https://github.com/yuyinws/nrun.git"
   },
-  "bugs": "https://github.com/yuyinws/nsc/issues",
+  "bugs": "https://github.com/yuyinws/nrun/issues",
   "keywords": [],
   "sideEffects": false,
   "exports": {
@@ -33,7 +33,7 @@
     }
   },
   "bin": {
-    "nsc": "bin/nsc.mjs"
+    "nrun": "bin/nrun.mjs"
   },
   "files": [
     "dist"
