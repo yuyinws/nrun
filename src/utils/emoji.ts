@@ -4,12 +4,13 @@ const emojiMap = {
   build: '📦',
   test: '🧪',
   lint: '🔍',
-  typecheck: '🔍',
+  check: '🔍',
   release: '🎉',
   publish: '🎉',
   preview: '👀',
   inspect: '👀',
   start: '🚀',
+  format: '📝',
 }
 
 export function setEmoji(command: string) {
