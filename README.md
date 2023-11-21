@@ -6,12 +6,49 @@ Interactive npm sciprts completion.
 [![bundle][bundle-src]][bundle-href]
 [![License][license-src]][license-href]
 
-## 🎥 Screen Recording
 
 
-## License
+![Kapture 2023-11-21 at 14.24.10](https://cdn.jsdelivr.net/gh/yuyinws/static@master/2023/11/upgit_20231121_1700548797.gif)
 
-[MIT](./LICENSE) License © 2023-PRESENT [yuyinws](https://github.com/yuyinws)
+
+
+## Usage
+
+### cli
+
+```
+npm insall -g @yuyin/nrun
+```
+
+```
+nrun
+```
+
+### Zsh Integration
+
+> **note**
+
+> Make sure you have globally installed `@yuyin/nrun`.
+
+```
+git clone -b zsh https://github.com/yuyinws/nrun ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-nrun
+```
+
+```sh
+# .zshrc
+
+plugins=(
+  ...
+  zsh-nrun
+)
+```
+
+
+
+Now, when you enter `npm run` and press the space key twice, it will work.
+
+It also detects [commands](https://github.com/yuyinws/nrun/blob/6a285bfd9a6fc4e123511b4ea2f76e62d748aa3b/zsh-nrun.plugin.zsh#L2C1-L2C1) such as `yarn`, `pnpm`, and `nr`...
+
 
 
 <!-- Badges -->
