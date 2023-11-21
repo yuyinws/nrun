@@ -26,7 +26,7 @@ nrun
 
 ### Zsh Integration
 
-> **Note**
+> **Note** 
 > Make sure you have globally installed `@yuyin/nrun`.
 
 ```
