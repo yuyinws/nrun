@@ -58,5 +58,5 @@ It also detects [commands](https://github.com/yuyinws/nrun/blob/6a285bfd9a6fc4e1
 [npm-downloads-href]: https://npmjs.com/package/@yuyin/nrun
 [bundle-src]: https://img.shields.io/bundlephobia/minzip/@yuyin/nrun?style=flat&colorA=080f12&colorB=1fa669&label=minzip
 [bundle-href]: https://bundlephobia.com/result?p=@yuyin/nrun
-[license-src]: https://img.shields.io/github/license/antfu/@yuyin/nrun.svg?style=flat&colorA=080f12&colorB=1fa669
-[license-href]: https://github.com/antfu/@yuyin/nrun/blob/main/LICENSE
+[license-src]: https://img.shields.io/github/license/yuyinws/nrun.svg?style=flat&colorA=080f12&colorB=1fa669
+[license-href]: https://github.com/yuyinws/nrun/blob/main/LICENSE
