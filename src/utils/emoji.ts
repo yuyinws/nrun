@@ -1,6 +1,6 @@
 const emojiMap = {
-  dev: '🛠',
-  serve: '🛠',
+  dev: '💡',
+  serve: '💡',
   build: '📦',
   test: '🧪',
   lint: '🔍',
@@ -11,6 +11,7 @@ const emojiMap = {
   inspect: '👀',
   start: '🚀',
   format: '📝',
+  clean: '🗑️',
 }
 
 export function setEmoji(command: string) {
