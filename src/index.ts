@@ -28,15 +28,13 @@ async function main() {
       options,
     }) as string
 
-    if (isCancel(script)) {
-      cancel('Operation cancelled')
+    if (isCancel(script))
       return exit(0)
-    }
 
     execSync(`npm run ${script}`, { stdio: 'inherit' })
   }
   else {
-    cancel('Operation cancelled')
+    cancel('No scripts in package.json')
     return exit(0)
   }
 }
